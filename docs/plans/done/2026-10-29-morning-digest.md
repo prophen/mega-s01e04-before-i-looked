@@ -1,6 +1,6 @@
 ---
 plan: morning-digest
-status: cleanup-pending
+status: done
 owner: rook
 opened: 2026-10-29
 ---
@@ -87,5 +87,9 @@ Done when: the preview link no longer shows the lane marker.
 | 3 | [Digest JSON route](https://github.com/prophen/mega-s01e04-before-i-looked/issues/3) | #1 |
 | 4 | [Board links](https://github.com/prophen/mega-s01e04-before-i-looked/issues/4) | #1 |
 | 5 | [Digest route tests](https://github.com/prophen/mega-s01e04-before-i-looked/issues/5) | #2, #3 |
-| 6 | [Preview for review](https://github.com/prophen/mega-s01e04-before-i-looked/issues/6) | #2 |
+| 6 | [Preview for review](https://github.com/prophen/mega-s01e04-before-i-looked/issues/6) | #1–5; reviewer has seen preview |
 | 7 | [Clean up preview](https://github.com/prophen/mega-s01e04-before-i-looked/issues/7) | #6 |
+
+Review confirmed 2026-10-30. After human approval, the page was exported again with
+`LANE_MARKER` unset and replaced at the same public HTTPS URL. A public fetch matched
+the clean export and displayed "no marker set". All ten tests and TypeScript checks passed.

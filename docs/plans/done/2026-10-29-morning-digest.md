@@ -1,6 +1,6 @@
 ---
 plan: morning-digest
-status: ready
+status: cleanup-pending
 owner: rook
 opened: 2026-10-29
 ---
@@ -77,3 +77,15 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by |
+|---|-------|-----------|
+| 1 | [Run log reader](https://github.com/prophen/mega-s01e04-before-i-looked/issues/1) | — |
+| 2 | [Digest page](https://github.com/prophen/mega-s01e04-before-i-looked/issues/2) | #1 |
+| 3 | [Digest JSON route](https://github.com/prophen/mega-s01e04-before-i-looked/issues/3) | #1 |
+| 4 | [Board links](https://github.com/prophen/mega-s01e04-before-i-looked/issues/4) | #1 |
+| 5 | [Digest route tests](https://github.com/prophen/mega-s01e04-before-i-looked/issues/5) | #2, #3 |
+| 6 | [Preview for review](https://github.com/prophen/mega-s01e04-before-i-looked/issues/6) | #2 |
+| 7 | [Clean up preview](https://github.com/prophen/mega-s01e04-before-i-looked/issues/7) | #6 |

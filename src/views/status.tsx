@@ -1,6 +1,7 @@
 import type { Status } from '../status.js';
 
 export function StatusBoard({ status }: { status: Status }) {
+  const summaries = new Map(status.nightSummaries.map((summary) => [summary.night, summary.counts]));
   return (
     <>
       <h1>status</h1>
@@ -19,9 +20,15 @@ export function StatusBoard({ status }: { status: Status }) {
         <p class="mute">nothing in runs/</p>
       ) : (
         <ul>
-          {status.nights.map((n) => (
-            <li>{n}</li>
-          ))}
+          {status.nights.map((n) => {
+            const counts = summaries.get(n);
+            return (
+              <li>
+                <a href={`/digest/${n}`}>{n}</a>
+                {counts ? <> · ok {counts.ok} · retry {counts.retry} · fail {counts.fail}</> : null}
+              </li>
+            );
+          })}
         </ul>
       )}
     </>
